@@ -2,6 +2,8 @@
 TXC-Tateti project
 """
 
+from model.board import Board
+
 
 class GameHandler(object):
     """
@@ -9,10 +11,10 @@ class GameHandler(object):
     in the view module
     """
     def __init__(self):
-        pass
+        self._board = Board()
 
     def start_game(self):
         """
         Starts a new game
         """
-        print("Started new game")
+        return "Game Started!"

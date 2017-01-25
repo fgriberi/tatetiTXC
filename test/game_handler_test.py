@@ -37,6 +37,9 @@ class TestGameHandler(unittest.TestCase):
         """
         Check the new game method
         """
-        with capture_output() as out:
-            self.ghandler.start_game()
-            self.assertEqual(out.getvalue(), "Started new game\n")
+        status = self.ghandler.start_game()
+        self.assertEqual("Game Started!", status)
+
+    def test_board_started(self):
+        self.assertTrue(self.ghandler._board is not None and
+                        self.ghandler._board.is_empty())
