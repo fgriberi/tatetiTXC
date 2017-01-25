@@ -1,11 +1,13 @@
 """
 TXC-Tateti project
 """
+
 from model.board import Board
+
 
 class GameHandler(object):
     """
-    This class is responsible to capture the game events produced 
+    This class is responsible to capture the game events produced
     in the view module
     """
     def __init__(self):
