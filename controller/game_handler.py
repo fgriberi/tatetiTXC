@@ -18,3 +18,9 @@ class GameHandler(object):
         Starts a new game
         """
         return "Game Started!"
+
+    def get_board_status(self):
+        """
+        Returns board status
+        """
+        return self._board.board

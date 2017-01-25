@@ -7,6 +7,7 @@ import io
 import sys
 
 from controller.game_handler import GameHandler
+from model.board import Board
 from contextlib import contextmanager
 
 
