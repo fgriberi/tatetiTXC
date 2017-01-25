@@ -13,12 +13,13 @@ def step_impl(context):
 def step_impl(context):
     assert "Welcome" in browser.html, "Welcome not found"
 
+
 @when(u'User start game')
 def step_impl(context):
     start_game_btn = browser.find_by_id("start_game")[0]
     start_game_btn.click()
 
+
 @then(u'game is started')
 def step_impl(context):
     assert "Game Started!" in browser.html
-
