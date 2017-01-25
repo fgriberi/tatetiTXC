@@ -50,4 +50,3 @@ class TestGameHandler(unittest.TestCase):
                           [Board.EMPTY, Board.EMPTY, Board.EMPTY],
                           [Board.EMPTY, Board.EMPTY, Board.EMPTY]]
         self.assertEqual(expected_board, self.ghandler.get_board_status())
-
