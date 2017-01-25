@@ -5,9 +5,6 @@ TXC-Tateti project
 import unittest
 from model.board import Board
 
-BOARD_WIDTH = 3
-BOARD_HEIGHT = 3
-
 
 class BoardTest(unittest.TestCase):
     """
@@ -32,10 +29,19 @@ class BoardTest(unittest.TestCase):
         """
         Check the board width
         """
-        self.assertEqual(self.board.width, BOARD_WIDTH)
+        self.assertEqual(self.board.width, Board.DEFAULT_BOARD_WIDTH)
 
     def test_board_height(self):
         """
         Check the board height
         """
-        self.assertEqual(self.board.height, BOARD_HEIGHT)
+        self.assertEqual(self.board.height, Board.DEFAULT_BOARD_HEIGHT)
+
+    def test_empty_board(self):
+        cboard = self.board.board
+
+        expected_board = [[Board.EMPTY, Board.EMPTY, Board.EMPTY],
+                          [Board.EMPTY, Board.EMPTY, Board.EMPTY],
+                          [Board.EMPTY, Board.EMPTY, Board.EMPTY]]
+
+        self.assertEqual(cboard, expected_board)
