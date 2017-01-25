@@ -19,10 +19,10 @@ def start_game():
     return render_template('game_started.html')
 
 
-@app.route('/playing', methods=["POST"])
-def playing():
+@app.route('/movement', methods=["POST"])
+def movement():
     """
-    Playing game
+    Movement handler function
     """
     return render_template('game_started.html', value="X")
 
