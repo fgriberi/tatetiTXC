@@ -19,5 +19,15 @@ def start_game():
     return render_template('game_started.html')
 
 
+@app.route('/playing', methods=["POST"])
+def playing():
+    """
+    Playing game
+    """
+    return render_template('game_started.html', value="X")
+
+
+
+
 if __name__ == "__main__":
     app.run()
