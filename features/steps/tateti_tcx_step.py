@@ -15,6 +15,4 @@ def step_impl(context):
 
 @then(u'Welcome screen start button will display')
 def step_impl(context):
-    started_button = browser.find_by_id("start_game")
-    print (started_button.first.html)
-    #assert "Start Game!" == started_button.text
+ 	assert "Start Game!" in browser.html
