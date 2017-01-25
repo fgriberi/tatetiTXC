@@ -10,5 +10,14 @@ def home():
     """
     return render_template('index.html')
 
+
+@app.route('/start_game')
+def start_game():
+    """
+    Start game
+    """
+    return render_template('game_started.html')
+
+
 if __name__ == "__main__":
     app.run()
