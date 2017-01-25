@@ -11,7 +11,7 @@ BOARD_HEIGHT = 3
 
 class BoardTest(unittest.TestCase):
     """
-    This class is responsible to test the model Board class methods 
+    This class is responsible to test the model Board class methods
     """
 
     board = None

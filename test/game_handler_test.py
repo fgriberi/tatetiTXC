@@ -9,6 +9,7 @@ import sys
 from controller.game_handler import GameHandler
 from contextlib import contextmanager
 
+
 @contextmanager
 def capture_output():
     new_out = io.StringIO()
@@ -38,4 +39,8 @@ class TestGameHandler(unittest.TestCase):
         """
         status = self.ghandler.start_game()
         self.assertEqual("Game Started!", status)
+
+    def test_board_started(self):
+        self.assertTrue(self.ghandler._board is not None and
+                        self.ghandler._board.is_empty())
 
