@@ -12,3 +12,9 @@ def step_impl(context):
 @then("Welcome screen message will display")
 def step_impl(context):
     assert "Welcome" in browser.html, "Welcome not found"
+
+@then(u'Welcome screen start button will display')
+def step_impl(context):
+    started_button = browser.find_by_id("start_game")
+    print (started_button.first.html)
+    #assert "Start Game!" == started_button.text
