@@ -29,6 +29,9 @@ class Board(object):
 
         return new_board
 
+    def do_mark(self, mark, x, y):
+        self._board[x][y] = mark
+
     @property
     def width(self):
         return self._width

@@ -45,3 +45,13 @@ class BoardTest(unittest.TestCase):
                           [Board.EMPTY, Board.EMPTY, Board.EMPTY]]
 
         self.assertEqual(cboard, expected_board)
+
+    def test_do_mark(self):
+        expected_board = [
+            [Board.EMPTY, Board.EMPTY, Board.EMPTY],
+            [Board.CROSS, Board.EMPTY, Board.EMPTY],
+            [Board.EMPTY, Board.EMPTY, Board.EMPTY]
+        ]
+
+        self.board.do_mark(Board.CROSS, 1, 0)
+        self.assertEqual(expected_board, self.board.board)
