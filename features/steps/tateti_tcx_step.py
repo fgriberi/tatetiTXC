@@ -31,13 +31,15 @@ def step_impl(context):
     start_game_btn.click()
 
 
-@when(u'User click button')
-def step_impl(context):
-    first_button = browser.find_by_id("first_button")[0]
+@when(u'User click button {x} {y}')
+def step_impl(context, x, y):
+    button_id = "first_button_" + str(x) + "_" + str(y)
+    first_button = browser.find_by_id(button_id)[0]
     first_button.click()
 
 
-@then(u'button change state')
-def step_impl(context):
-    class_css_btn = browser.find_by_id("first_button")[0]
+@then(u'button {x} {y} change state')
+def step_impl(context, x, y):
+    button_id = "first_button_" + str(x) + "_" + str(y)
+    class_css_btn = browser.find_by_id(button_id)[0]
     assert "X" in class_css_btn.value

@@ -1,6 +1,5 @@
 Feature: Tateti TXC
 
-
 Scenario: Welcome screen
   Given Tateti app home
   Then Welcome screen message will display
@@ -13,5 +12,5 @@ Scenario: Welcome screen start game
 Scenario: First game movement 
   Given Tateti app home
   And User start game
-  When User click button
-  Then button change state
+  When User click button 0 0
+  Then button 0 0 change state

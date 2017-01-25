@@ -9,6 +9,7 @@ import sys
 from controller.game_handler import GameHandler
 from contextlib import contextmanager
 
+
 @contextmanager
 def capture_output():
     new_out = io.StringIO()
@@ -39,4 +40,3 @@ class TestGameHandler(unittest.TestCase):
         with capture_output() as out:
             self.ghandler.start_game()
             self.assertEqual(out.getvalue(), "Started new game\n")
-

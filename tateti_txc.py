@@ -24,9 +24,7 @@ def movement():
     """
     Movement handler function
     """
-    return render_template('game_started.html', value="X")
-
-
+    return render_template('game_started.html', value_0_0="X")
 
 
 if __name__ == "__main__":
