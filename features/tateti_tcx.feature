@@ -7,4 +7,5 @@ Scenario: Welcome screen
 
 Scenario: Welcome screen start game 
   Given Tateti app home
-  Then Welcome screen start button will display
+  When User start game
+  Then game is started
