@@ -15,4 +15,4 @@ class GameHandler(object):
         """
         Starts a new game
         """
-        print("Started new game")
+        return "Game Started!"
