@@ -1,3 +1,5 @@
 *.pyc
 test/*.pyc
 test/__pycache__/*
+cover
+.coverage
