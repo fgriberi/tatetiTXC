@@ -44,3 +44,9 @@ class TestGameHandler(unittest.TestCase):
         self.assertTrue(self.ghandler._board is not None and
                         self.ghandler._board.is_empty())
 
+    def test_get_initial_board(self):
+        expected_board = [[Board.EMPTY, Board.EMPTY, Board.EMPTY],
+                  [Board.EMPTY, Board.EMPTY, Board.EMPTY],
+                  [Board.EMPTY, Board.EMPTY, Board.EMPTY]]
+        self.assertEqual(expected_board, self.ghandler.get_board_status())
+
